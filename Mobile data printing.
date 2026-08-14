@@ -1,0 +1,35 @@
+#include<iostream>
+class mobile
+{
+    public:
+    int price,modelnumber;
+    void accept()
+    {
+        std:: cout<<"\nEnter the price for the mobile: ";
+        std:: cin>>price;
+        std:: cout<<"\nEnter the model number of the mobile: ";
+        std:: cin>>modelnumber;
+    }
+    void display()
+    {
+        std:: cout<<"\nThe price for the mobile : "<<price;
+        std:: cout<<"\nThe model number of the mobile : "<<modelnumber;
+    }
+};
+int main()
+{
+    mobile m[10];
+    std:: cout<<"Enter the details for 10 mobiles: \n\n";
+    for(int i=0;i<10;i++)
+    {
+        std:: cout<<"Enter the data for mobile number "<<i+1;
+        m[i].accept();
+    }
+    std:: cout<<"\nThe data for the 10 mobiles is as follows: ";
+    for(int i=0;i<10;i++)
+    {
+        std:: cout<<"\nThe data for the mobile "<<i+1;
+        m[i].display();
+    }
+    return 0;
+}
